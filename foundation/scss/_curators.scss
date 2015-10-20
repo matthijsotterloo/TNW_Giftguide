@@ -1,0 +1,135 @@
+.curator {
+	position: relative;
+
+	padding: 50px $default-padding;
+
+	@media #{$medium-up} {
+		padding: 75px $default-padding;
+	}
+	@media #{$large-up} {
+		padding: 100px $default-padding;
+	}
+
+	& .portrait-container {
+		position: relative;
+		margin-bottom: 28px;
+
+		@media #{$medium-up} {
+			margin-bottom: 40px;
+		}
+		@media #{$large-up} {
+			margin-bottom: 54px;
+		}
+
+		& .portrait-circle {
+			position: absolute;
+			top: $portrait-circle-padding;
+			left: $portrait-circle-padding;
+			$size: 100% - 2 * $portrait-circle-padding;
+			width: $size;
+			height: $size;
+
+			background-color: rgba($secondary-color, $alpha-fade);
+			@include round;
+		}
+
+		& .curator-name {
+			position: absolute;
+			left: 0;
+			bottom: $portrait-circle-padding;
+			margin: 0;
+
+			font-size: 40px;
+			font-family: $font-family-secondary;
+			text-transform: uppercase;
+			line-height: 1;
+			letter-spacing: 0;
+
+			color: $primary-color;
+
+			@media #{$medium-up} {
+				font-size: 50px;
+			}
+			@media #{$large-up} {
+				font-size: 55px;
+			}
+			@media #{$xlarge-up} {
+				font-size: 70px;
+			}
+			@media #{$xxlarge-up} {
+				font-size: 80px;
+			}
+		}
+
+		& .curator-title {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			margin: 0;
+
+			font-size: 16px;
+			line-height: 1;
+
+			color: $alert-color;
+
+			@media #{$xlarge-up} {
+				font-size: 24px;
+			}
+			@media #{$xxlarge-up} {
+				font-size: 26px;
+			}
+		}
+
+		& .twitter-circle {
+			position: absolute;
+			right: 0;
+			bottom: $portrait-circle-padding;
+			width: $portrait-circle-padding * 1.25;
+			height: $portrait-circle-padding * 1.25;
+
+			font-size: 24px;
+
+			color: $alert-color;
+			background-color: rgba($secondary-color, $alpha-fade);
+			@include round;
+
+			& > * {
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				@include transform(translate(-50%, -50%));
+			}
+			@media #{$medium-up} {
+				font-size: 24px;
+			}
+			@media #{$large-up} {
+				font-size: 32px;
+			}
+			@media #{$xlarge-up} {
+				font-size: 34px;
+			}
+			@media #{$xxlarge-up} {
+				font-size: 38px;
+			}
+		}
+	}
+
+	& .curator-text {
+		margin: 0;
+		margin-bottom: $default-padding;
+		font-size: 16px;
+
+		@media #{$xlarge-up} {
+			font-size: 24px;
+		}
+		@media #{$xxlarge-up} {
+			font-size: 26px;
+		}
+	}
+}
+
+hr.seperator {
+	border-top-width: 2px;
+	border-color: rgba($primary-color, 0.25);
+	margin: 0;
+}

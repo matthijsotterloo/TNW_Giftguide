@@ -1,0 +1,17 @@
+@mixin border-radius($radius, $corner: "") {
+	@if ($corner == "")
+	{
+		-webkit-border-radius: $radius;
+		-moz-border-radius:    $radius;
+		border-radius:         $radius;
+	}
+	@else
+	{
+		-webkit-border-#{$corner}-radius: $radius;
+		-moz-border-#{$corner}-radius:    $radius;
+		border-#{$corner}-radius:         $radius;
+	}
+}
+@mixin round {
+	@include border-radius(9999px);
+}

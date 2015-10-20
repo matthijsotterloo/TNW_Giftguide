@@ -1,0 +1,23 @@
+@font-face {
+	font-family: Farray;
+	src: font('Farray.otf') format('opentype');
+}
+
+@mixin ars-maquette-font($style, $weight, $postfix) {
+	@font-face {
+		font-family: 'ARSMaquette';
+		font-style: $style;
+		font-weight: $weight;
+		src: font('ARSMaquettePro-#{$postfix}.otf') format('truetype');
+	}
+}
+@include ars-maquette-font(normal, lighter, 'Light');
+@include ars-maquette-font(normal, normal,  'Regular');
+@include ars-maquette-font(normal, 600,     'Medium');
+@include ars-maquette-font(normal, bold,    'Bold');
+@include ars-maquette-font(normal, 800,     'Black');
+@include ars-maquette-font(italic, lighter, 'LightItalic');
+@include ars-maquette-font(italic, normal,  'RegularItalic');
+@include ars-maquette-font(italic, 600,     'MediumItalic');
+@include ars-maquette-font(italic, bold,    'BoldItalic');
+@include ars-maquette-font(italic, 800,     'BlackItalic');

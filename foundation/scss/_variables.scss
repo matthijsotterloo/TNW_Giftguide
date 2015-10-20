@@ -1,0 +1,18 @@
+@function image($path)
+{
+	$folder: "../../img/";
+	@return url("#{$folder}#{$path}");
+}
+@function font($path)
+{
+	$folder: "../../fonts/";
+	@return url("#{$folder}#{$path}");
+}
+
+$alpha-fade: 0.2;
+
+$default-padding: rem-calc(24);
+$large-padding:   rem-calc(40);
+$larger-padding:  rem-calc(120);
+
+$portrait-circle-padding: 12%;

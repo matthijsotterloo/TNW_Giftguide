@@ -1,0 +1,132 @@
+.product {
+	position: relative;
+	padding: $larger-padding $default-padding $large-padding $default-padding;
+
+	& .product-image-container {
+		position: relative;
+		margin-bottom: $large-padding;
+
+		& .product-label {
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 80px;
+			height: 80px;
+
+			text-align: center;
+			text-transform: uppercase;
+
+			color: $primary-color;
+			background-color: rgba($secondary-color, $alpha-fade);
+			@include round;
+
+			@media #{$medium-up} {
+				width: 96px;
+				height: 96px;
+			}
+			@media #{$large-up} {
+				width: 112px;
+				height: 112px;
+			}
+			@media #{$xlarge-up} {
+				width: 112px;
+				height: 112px;
+			}
+			@media #{$xxlarge-up} {
+				width: 128px;
+				height: 128px;
+			}
+
+			& .product-label-text {
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				@include transform(translate(-50%, -50%));
+
+				font-size: 18px;
+				font-weight: bold;
+				line-height: 1;
+
+				@media #{$medium-up} {
+					font-size: 20px;
+				}
+				@media #{$large-up} {
+					font-size: 22px;
+				}
+				@media #{$xlarge-up} {
+					font-size: 24px;
+				}
+				@media #{$xxlarge-up} {
+					font-size: 26px;
+				}
+
+				& .price {
+					font-size: 1.25em;
+				}
+			}
+		}
+	}
+
+	& .product-name {
+		margin: 0;
+		margin-bottom: $large-padding;
+
+		font-size: 22px;
+		line-height: 1;
+		text-transform: uppercase;
+		font-weight: 800;
+
+		color: $primary-color;
+
+		@media #{$xlarge-up} {
+			font-size: 26px;
+		}
+		@media #{$xlarge-up} {
+			font-size: 30px;
+		}
+		@media #{$xxlarge-up} {
+			font-size: 38px;
+		}
+	}
+
+	& .product-text {
+		font-size: 16px;
+
+		@media #{$xlarge-up} {
+			font-size: 22px;
+		}
+		@media #{$xxlarge-up} {
+			font-size: 24px;
+		}
+	}
+
+	& .product-buy {
+		font-size: 22px;
+		text-transform: uppercase;
+
+		color: $black;
+
+		@media #{$xlarge-up} {
+			font-size: 26px;
+		}
+		@media #{$xlarge-up} {
+			font-size: 30px;
+		}
+		@media #{$xxlarge-up} {
+			font-size: 38px;
+		}
+
+		& .product-button {
+			display: inline-block;
+			margin-right: $default-padding / 2;
+			padding: ($default-padding / 2) $default-padding;
+
+			font-weight: 800;
+			text-decoration: none;
+			text-transform: uppercase;
+
+			background-color: $alert-color;
+			@include border-radius(6px);
+		}
+	}
+}
